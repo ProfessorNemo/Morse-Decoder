@@ -16,7 +16,7 @@ class Decoder
   end
 
   def decode_word(word)
-    @letters = word.split(' ')
+    @letters = word.split
     @current_word = ''
     @letters.each do |letter|
       get_letter(letter)
