@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'morse'
 
 class Decoder
@@ -20,7 +22,7 @@ class Decoder
       get_letter(letter)
       @current_word += get_letter(letter)
     end
-    print "#{@current_word} "
+    print "#{@current_word}\n"
   end
 
   def decode_message

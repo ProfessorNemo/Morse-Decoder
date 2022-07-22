@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # программа по дешифровке и зашифровке в азбуку Морзе
 require_relative 'lib/encrypt'
 require_relative 'lib/decoder'
@@ -6,7 +8,7 @@ require_relative 'lib/decoder'
 # https://github.com/nashby/wtf_lang
 require 'wtf_lang'
 
-WtfLang::API.key = '0cb55dd4cc971ec3132e94d1e1760f92' # you can get it here http://detectlanguage.com/
+WtfLang::API.key = '************************' # you can get it here http://detectlanguage.com/
 
 # Введите фразу на русском или английском языке:
 phrase = $stdin.gets.chomp

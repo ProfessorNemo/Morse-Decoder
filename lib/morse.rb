@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Morse
   EN_DICTIONARY = {
     '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F', '--.' => 'G',
