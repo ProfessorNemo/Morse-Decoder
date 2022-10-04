@@ -8,7 +8,11 @@ require_relative 'lib/decoder'
 # https://github.com/nashby/wtf_lang
 require 'wtf_lang'
 
-WtfLang::API.key = '************************' # you can get it here http://detectlanguage.com/
+# решение для загрузки переменных среды из .env
+require 'dotenv'
+
+# you can get it here http://detectlanguage.com/
+WtfLang::API.key = Dotenv.load('.env')['API_TOKEN']
 
 # Введите фразу на русском или английском языке:
 phrase = $stdin.gets.chomp

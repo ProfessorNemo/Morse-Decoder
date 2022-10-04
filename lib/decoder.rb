@@ -4,6 +4,7 @@ require_relative 'morse'
 
 class Decoder
   include Morse
+
   def initialize(decod)
     @message = decod[:message]
     @language = decod[:language]
@@ -17,16 +18,21 @@ class Decoder
 
   def decode_word(word)
     @letters = word.split
+
     @current_word = ''
+
     @letters.each do |letter|
       get_letter(letter)
+
       @current_word += get_letter(letter)
     end
+
     print "#{@current_word}\n"
   end
 
   def decode_message
     @words = @message.split('       ')
+
     @words.each do |word|
       decode_word(word)
     end

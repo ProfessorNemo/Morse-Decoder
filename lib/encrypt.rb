@@ -4,6 +4,7 @@ require_relative 'morse'
 
 class Encrypt
   include Morse
+
   def initialize(code)
     @code = code
   end
